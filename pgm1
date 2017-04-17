@@ -1,0 +1,5 @@
+  #include<stdio.h>  
+  int main() 
+  {   
+  int a, b, c;     
+  printf("Enter two numbers to add\n");    scanf("%d%d",&a,&b);      c = a + b;      printf("Sum of entered numbers = %d\n",c);      return 0; }  Output of program: add numbers  Download Add numbers program executable.  In the expression (c = a + b) overflow may occur if sum of a and b is larger than maximum value which can be stored in variable c. Addition without using third variable  #include<stdio.h>   main() {    int a = 1, b = 2;      /* Storing result of addition in variable a */      a = a + b;      /** Not recommended because original value of a is lost       *  and you may be using it somewhere in code considering it      *  as it was entered by the user.      */      printf("Sum of a and b = %d\n", a);      return 0; }
